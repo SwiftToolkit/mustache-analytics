@@ -12,16 +12,29 @@ struct AnalyticsGenerator: ParsableCommand {
         let events = try loadEvents()
         let generatedCode = try generate(using: events)
 
-        // TODO: save the generated file
+        let outputPath = FileManager.default.currentDirectoryPath + "/Events.swift"
+        try generatedCode.write(
+            to: URL(fileURLWithPath: outputPath),
+            atomically: true,
+            encoding: .utf8
+        )
     }
 
     func loadEvents() throws -> [AnalyticEvent] {
-        // TODO: implement loading the events from the input parameter
-        []
+        let inputPath = FileManager.default.currentDirectoryPath + "/" + input
+        let eventsTable = try URL(fileURLWithPath: inputPath).loadString()
+        return try MarkDecoder().decode([AnalyticEvent].self, from: eventsTable)
     }
 
     func generate(using events: [AnalyticEvent]) throws -> String {
-        // TODO: generate code using the template and passing the events
-        ""
+        guard let templateURL = Bundle.module
+            .url(forResource: "EventsSwift", withExtension: ".mustache") else {
+            fatalError("Template file not found")
+        }
+
+        let templateString = try templateURL.loadString()
+        let template = try MustacheTemplate(string: templateString)
+
+        return template.render(["events": events])
     }
 }

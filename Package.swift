@@ -22,6 +22,9 @@ let package = Package(
                 .product(name: "Mustache", package: "swift-mustache"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "MarkCodable", package: "MarkCodable")
+            ],
+            resources: [
+                .copy("Resources")
             ]
         ),
     ]
