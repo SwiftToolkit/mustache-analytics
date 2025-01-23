@@ -1,0 +1,51 @@
+{
+  "originHash" : "0a61463542ab935458f5bd4967609514acc16cbd002d19d45423b957ca0f3f43",
+  "pins" : [
+    {
+      "identity" : "markcodable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MarkCodable/MarkCodable.git",
+      "state" : {
+        "revision" : "3c4943590e764b177dc851a94447f31d8eaf607c",
+        "version" : "0.6.9"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser.git",
+      "state" : {
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
+      }
+    },
+    {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/markcodable/swift-cmark.git",
+      "state" : {
+        "revision" : "476f7b4fcf12eba381b4aaed8987006fd8fcec9c",
+        "version" : "0.100.1"
+      }
+    },
+    {
+      "identity" : "swift-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/markcodable/swift-markdown.git",
+      "state" : {
+        "revision" : "009bf792b3a7d12ea32c70938657089e6d068dd6",
+        "version" : "0.100.1"
+      }
+    },
+    {
+      "identity" : "swift-mustache",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hummingbird-project/swift-mustache.git",
+      "state" : {
+        "revision" : "9de71fc4d10f0efc0ac758d0acf14e75d39b47b4",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
